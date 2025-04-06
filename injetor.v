@@ -6,5 +6,15 @@ module injetor(
 );
 
 // insira seu código aqui
+  always @(entrada, n, erro)
+  begin
+     saida = entrada;
 
+    if (erro == 1 && n < 9)
+    begin
+
+      saida[n] = ~entrada[n];
+
+    end
+  end
 endmodule
